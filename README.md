@@ -50,7 +50,36 @@ Open `notebooks/deepfake_detection_colab.ipynb` in Google Colab or Jupyter Noteb
 This project may require a deepfake dataset for training and evaluation. Download the dataset separately and update the dataset path in the notebook to match your environment.
 
 **The dataset is not included in this repository** because of its large size.
+## Model Evaluation
 
+The model was evaluated on a validation set of 603 images.
+
+| Metric | Result |
+|---|---:|
+| Validation Accuracy | 84.74% |
+| ROC-AUC | 0.8843 |
+| Fake Class F1-score | 0.90 |
+| Real Class F1-score | 0.61 |
+
+The model performs better on fake-image classification than on real-image classification. Further evaluation and improvements may help balance performance across both classes.
+
+### Classification Report
+
+![Classification report and evaluation metrics](screenshots/evaluation-results.png)
+
+### Confusion Matrix
+
+The following image contains both count-based and normalized confusion matrices.
+
+![Confusion matrices](screenshots/confusion-matrix.png)
+
+### ROC Curve
+
+![ROC curve showing true positive rate against false positive rate](screenshots/roc-curve.png)
+
+### Prediction Example
+
+![Deepfake prediction result](screenshots/prediction-result.png)
 ## Technologies Used
 
 - Python
